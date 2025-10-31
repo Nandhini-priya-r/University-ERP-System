@@ -1,0 +1,34 @@
+
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/universitydb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">P@ssword</property>
+
+        <!-- Hibernate settings -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+        <!-- Entity mappings -->
+        <mapping class="org.hibernate.entity.Student"/>
+		<mapping class="org.hibernate.entity.Course"/>
+		<mapping class="org.hibernate.entity.Library"/>
+		<mapping class="org.hibernate.entity.StudentAttendance"/>
+		<mapping class="org.hibernate.entity.StudentMark"/>
+		<mapping class="org.hibernate.entity.Faculty"/>
+		<mapping class="org.hibernate.entity.Member"/>
+		<mapping class="org.hibernate.entity.BookIssue"/>
+		<mapping class="org.hibernate.entity.Librarian"/>
+		<mapping class="org.hibernate.entity.Fees"/>
+		<mapping class="org.hibernate.entity.Exam"/>
+		<mapping class="org.hibernate.entity.Department"/>
+		<mapping class="org.hibernate.entity.Admin"/>
+
+    </session-factory>
+</hibernate-configuration>
